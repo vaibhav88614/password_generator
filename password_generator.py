@@ -7,3 +7,7 @@ print(random_number)
 # Generate a random character from a-z
 random_char = random.choice('abcdefghijklmnopqrstuvwxyz')
 print(random_char)
+
+# Generate a random character from a-z
+random_char = random.choice('abcdefghijklmnopqrstuvwxyz')
+print(random_char)
