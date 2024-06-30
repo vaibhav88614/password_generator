@@ -8,6 +8,10 @@ print(random_number)
 random_char = random.choice('abcdefghijklmnopqrstuvwxyz')
 print(random_char)
 
-# Generate a random character from a-z
-random_char = random.choice('abcdefghijklmnopqrstuvwxyz')
-print(random_char)
+# Generate a list of 5 unique random numbers between 0 and 100
+random_numbers = random.sample(range(0, 101), 5)
+print(random_numbers)
+
+# Generate a list of 5 random characters from a-z
+random_chars = random.choices('abcdefghijklmnopqrstuvwxyz', k=5)
+print(random_chars)
