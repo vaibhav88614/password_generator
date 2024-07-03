@@ -9,3 +9,6 @@ Make sure to Install nltk(Natural Language Toolkit) in your system before runnin
 pip install nltk
 
 ```
+
+## Acknowledgements
+> Everyone who has filed issues, tested, fixed issues, added translations and helped over the years. Thank you!
