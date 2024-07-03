@@ -1,17 +1,26 @@
-import random
+import secrets
+import string
 
-# Generate a random number between 0 and 100
-random_number = random.randint(0, 100)
-print(random_number)
+def generate_password(length):
+    alphabet = string.ascii_letters + string.digits + string.punctuation
+    secure_random = secrets.SystemRandom()
+    password = ''.join(secure_random.choice(alphabet) for _ in range(length))
+    return password
 
-# Generate a random character from a-z
-random_char = random.choice('abcdefghijklmnopqrstuvwxyz')
-print(random_char)
+def main():
+    min_length = 10
+    max_length = 64
 
-# Generate a list of 5 unique random numbers between 0 and 100
-random_numbers = random.sample(range(0, 101), 5)
-print(random_numbers)
+    try:
+        length = int(input(f"Enter password length ({min_length}-{max_length} characters): "))
+        if length < min_length or length > max_length:
+            raise ValueError(f"Password length must be between {min_length} and {max_length} characters.")
+        
+        password = generate_password(length)
+        print(f"Generated password: {password}")
 
-# Generate a list of 5 random characters from a-z
-random_chars = random.choices('abcdefghijklmnopqrstuvwxyz', k=5)
-print(random_chars)
+    except ValueError as ve:
+        print(f"Error: {ve}")
+
+if __name__ == "__main__":
+    main()
